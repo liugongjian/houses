@@ -22,7 +22,12 @@ public class HelloController {
 		User one = users.get(0);
 		modelMap.put("user", one);
 		
-		return "hello";
+		return "hello";//ftl,返回根目录为src/main/resources/
+	}
+	
+	@RequestMapping("index")
+	public String index(){
+		return "homepage/index";//ftl,返回根目录为src/main/resources/
 	}
 
 }
